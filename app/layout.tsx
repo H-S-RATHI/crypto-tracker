@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Crypto Traacker',
-  generator: 'v0.dev',
+  title: 'Crypto Tracker',
+  description: 'Track cryptocurrency prices in real-time',
+  generator: 'Next.js',
 }
 
 export default function RootLayout({
