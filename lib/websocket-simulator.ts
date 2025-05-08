@@ -21,14 +21,18 @@ class WebSocketSimulator {
       // Update price changes
       const priceChange1h = asset.priceChange1h + (Math.random() * 0.4 - 0.2)
       const priceChange24h = asset.priceChange24h + (Math.random() * 0.6 - 0.3)
-      const priceChange7d = asset.priceChange7d + (Math.random() * 0.8 - 0.4)
+      
+      // Update chart data
+      const newChartData = [...asset.chartData.slice(1), newPrice]
+      
+      // Calculate 7d price change based on the actual chart data
+      // First element is now the price from 6 days ago, last element is current price
+      const oldestPrice = newChartData[0]
+      const priceChange7d = ((newPrice - oldestPrice) / oldestPrice) * 100
 
       // Update volume (±5%)
       const volumeChange = (Math.random() * 10 - 5) / 100
       const newVolume = asset.volume24h * (1 + volumeChange)
-
-      // Update chart data
-      const newChartData = [...asset.chartData.slice(1), newPrice]
 
       // Dispatch update action
       store.dispatch(
