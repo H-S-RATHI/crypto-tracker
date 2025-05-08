@@ -2,7 +2,7 @@
 
 A real-time cryptocurrency price tracking application built with Next.js, Redux, and Tailwind CSS. This application displays live cryptocurrency data with price updates, charts, and market information.
 
-![Crypto Price Tracker](https://via.placeholder.com/800x400?text=Crypto+Price+Tracker)
+![Crypto Price Tracker](/public/placeholder.svg)
 
 ## Features
 
